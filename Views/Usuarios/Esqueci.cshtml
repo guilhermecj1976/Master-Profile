@@ -1,0 +1,19 @@
+﻿@{ ViewBag.Title = "Esqueci";
+    Layout = "~/Views/Shared/_LayoutLogin.cshtml"; }
+
+<h2>Esqueci a senha</h2>
+
+<form method="post">
+    <div class="container">
+        <label>Usúario</label>
+        <input type="email" name="usuario" id="usuario" required />
+        <input type="submit" value="ok" class="btn btn-primary" />
+    </div>
+    <div>
+        @ViewBag.Mensagem
+    </div>
+</form>
+
+<div>
+    <a href="~/Usuarios/Login" class="btn btn-default">Tela de login</a>
+</div>

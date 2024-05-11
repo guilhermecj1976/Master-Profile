@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Email>
+	<email id="1" tipo="Servidor" valor="smtp-mail.outlook.com" />
+	<email id="2" tipo="Porta" valor="587" />
+	<email id="3" tipo="SSL" valor="true" />
+	<email id="4" tipo="DefaultCredentials" valor="false" />
+	<email id="5" tipo="Login" valor="joao.miranda@souunisales.com.br" />
+	<email id="6" tipo="Senha" valor="Izabel123" />
+</Email>

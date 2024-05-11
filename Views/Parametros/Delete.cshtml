@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<section>
+    <div>
+        <form action="~/Parametros/Delete" method="post">
+            <div>
+                <label for="id">Id</label>
+                <input type="text" id="id" name="id" value="@ViewBag.Email.Id" readonly="readonly" />
+            </div>
+            <div>
+                <label for="tipo">Tipo</label>
+                <input type="text" id="tipo" name="tipo" value="@ViewBag.Email.Tipo" readonly="readonly" />
+            </div>
+            <div>
+                <label for="valor">Valor</label>
+                <input type="text" id="valor" name="valor" value="@ViewBag.Email.Valor" readonly="readonly" />
+            </div>
+            <div>
+                <input type="submit" class="btn btn-danger" value="Confirmar" />
+                <a href="~/Parametros/Index" class="btn btn-default">Voltar</a>
+            </div>
+
+        </form>
+    </div>
+</section>

@@ -1,0 +1,123 @@
+﻿@{ ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_LayoutLogin.cshtml"; }
+
+@*Código do Weber
+    <form method="post">
+        <div class="container">
+            <label>Usúario</label>
+            <input type="email" name="usuario" id="usuario" required/>
+            <label>Senha:</label>
+            <input type="password" name="senha" id="senha" required/>
+            <input type="submit" value="ok" class="btn btn-primary"/>
+        </div>
+        <div>
+            @ViewBag.Mensage
+        </div>
+    </form>*@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        {
+            font-family: apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygem, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", "sans serif";
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            background-color: black;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        main {
+            position: relative;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        section#Login {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-100%, -74%);
+            background-color: white;
+            height: 500px;
+            width: 250px;
+            border-radius: 20px;
+        }
+
+        section#Login > div#formulario {
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 0px;
+            width: 250px;
+            border-radius: 100px;
+            display: block;
+            padding: 20px
+        }
+
+        input[type="email"],
+        input[type="password"],
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: 0px 0px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .links {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section id="Login">
+            <div id="imagem">
+                <img src="~/Image/Tela.png" />
+            </div>
+            <div id="formulario">
+                <h1>Login</h1>
+                <p>Seja bem vindo(a) novamente!</p>
+                <form method="post">
+                    <div>
+                        <label>Usúario</label>
+                        <input type="email" name="usuario" id="usuario" required />
+                        <label>Senha</label>
+                        <input type="password" name="senha" id="senha" required />
+                        <input type="submit" value="ok" class="btn btn-primary" />
+                    </div>
+                    <div class="links">
+                        <a href="~/Usuarios/Esqueci">Esqueceu a senha?</a> | <a href="~/Usuarios/Create">Registrar</a>
+                    </div>
+                    <div>
+                        @ViewBag.Mensage
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

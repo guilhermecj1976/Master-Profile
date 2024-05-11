@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>create</h2>
+
+<section>
+    <div>
+        <form action="~/Parametros/Create" method="post">
+               <div>
+                  <label for="tipo">Tipo</label>
+                  <input type="text" id="tipo" name="tipo" value="" required/>
+               </div>
+               <div>
+                  <label for="valor">Valor</label>
+                  <input type="text" id="valor" name="valor" value="" required/>
+              </div>
+               <div>
+                   <input type="submit" class="btn btn-success" value="Salvar" />
+                   <a href="~/Parametros/Index" class="btn btn-default">Voltar</a>
+               </div>
+                   
+        </form>
+    </div>
+</section>

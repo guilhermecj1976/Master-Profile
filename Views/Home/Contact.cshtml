@@ -1,0 +1,63 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<section>
+    <div>
+        <form action="~/Home/Contact" method="post">
+            <div>
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" value="" required />
+            </div>
+            <div>
+                <label for="assunto">Assunto</label>
+                <input type="text" id="assunto" name="assunto" value="" required />
+            </div>
+            <div>
+                <label for="mensagem">Mensagem</label>
+                <textarea type="text" id="mensagem" name="mensagem" value="" required></textarea>
+            </div>
+            <div>
+                <input type="file" id="anexo" onchange="converterImagem();" />
+            </div>
+            <div id="apresentar-imagem">
+
+            </div>
+            <input type="text" id="codigo64" name="codigo64" />
+            <div>
+                <input type="submit" id="btnEnviar" class="btn btn-success" value="Enviar" />
+                <a href="~/Home/Index" class="btn btn-default">Voltar</a>
+            </div>
+            <div>
+                @ViewBag.Mensagem
+            </div>
+        </form>
+    </div>
+</section>
+
+<script type="text/javascript">
+    //Função converter imagem para base64
+    function converterImagem() {
+        var receberArquivo = document.getElementById("anexo").files;
+
+        if (receberArquivo.length > 0) {
+            var carregarImagem = receberArquivo[0];
+
+            var lerArquivo = new FileReader();
+            lerArquivo.onload = function (arquivoCarregado) {
+                var imagemBase64 = arquivoCarregado.target.result;
+                var novaImagem = document.createElement('img');
+                novaImagem.src = imagemBase64;
+                document.getElementById("apresentar-imagem").innerHTML = novaImagem.outerHTML;
+                document.getElementById("codigo64").value = novaImagem.src;
+            }
+
+            lerArquivo.readAsDataURL(carregarImagem);
+
+            const myElement = document.getElementById("btnEnviar");
+            myElement.style.display = "block";
+        }
+    }
+</script>

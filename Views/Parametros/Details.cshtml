@@ -1,0 +1,20 @@
+﻿@{ ViewBag.Title = "Details";
+                Layout = "~/Views/Shared/_Layout.cshtml"; }
+
+<h2>Details</h2>
+
+<section>
+    <div>
+        <div>
+            <label for="tipo">Tipo</label>
+            <input type="text" id="tipo" name="tipo" value="@ViewBag.Email.Tipo" disabled="disabled" />
+        </div>
+        <div>
+            <label for="valor">Valor</label>
+            <input type="text" id="valor" name="valor" value="@ViewBag.Email.Valor" disabled="disabled" />
+        </div>
+        <div>
+            <a href="~/Parametros/Index" class="btn btn-default">Voltar</a>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+<p>
+    <a href="~/Parametros/Create" class="btn btn-primary">Novo</a>
+</p>
+<section>
+    <div>
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Tipo</th>
+                    <th>Valor</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var l in ViewBag.Email)
+                {
+                    <tr>
+                    <td>
+                        @l.Tipo
+                    </td>
+                    <td>
+                        @l.Valor
+                    </td>
+                    <td>
+                        <a href="~/Parametros/Details/@l.Id" class="btn btn-primary">Visualizar</a>
+                        <a href="~/Parametros/Edit/@l.Id" class="btn btn-success">Editar</a>
+                        <a href="~/Parametros/Delete/@l.Id" class="btn btn-danger">Excluir</a>
+                    </td>
+                </tr>
+                 }
+            </tbody>
+            
+        </table>
+    </div>
+</section>
+
